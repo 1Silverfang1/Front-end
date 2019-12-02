@@ -1,0 +1,118 @@
+*
+{ 
+    font-family: sans-serif;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background:#101010; 
+}
+.topNavigationBar a
+{
+    text-decoration: none;
+  color: aliceblue;
+}
+.topNavigationBar ul :hover
+{
+    background-color:   #47d147;
+}
+.topNavigationBar
+{
+    background: #333;
+    font-family: sans-serif;
+    position: fixed;
+    top: 2px;
+   
+}
+#active
+{
+    background: #47d147;
+}
+.topNavigationBar ul
+{
+    list-style: none;
+    line-height: 50px;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.topNavigationBar ul li
+{
+    float: left;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    min-width: 165px;
+    font-size: 15px;
+    padding-left: 5px;
+    color: #e6e6e6;
+    background: #333;
+}
+.active
+{
+    background-color: #47d147;
+    color: #47d147;
+}
+.topNavigationBar i
+{
+    text-align: center;
+    padding-right: 5px;
+}
+.form
+{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.textbox i
+{
+    width: 26px;
+    padding-top: 5px;
+    float: left;
+    text-align: center;
+
+}
+.btn
+{
+    width: 100%;
+    background: none;
+    border: 2px solid #4caf50;
+    color: white;
+    height: 30px;
+    cursor: pointer;
+
+}
+.textbox input
+{
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 15px;
+    width: 180px;
+    padding-left: 15px;
+    color: #4caf50;
+}
+.form h1
+{
+    float: left;
+    font-size: 40px;
+    border-bottom: 4px solid #4caf50;
+    margin-bottom: 5px;
+    padding-bottom: 13px 0;
+}
+.textbox
+{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding:  8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #4caf50;
+}

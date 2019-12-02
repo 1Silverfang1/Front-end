@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My-new-page</title>
+    <body>
+    <img class ="slideshow" src="../images/Natsu.jpg" alt="Fire" height="295px" width="295px">
+    <img class ="slideshow" src="../images/natsu.jpg" alt="Fire" height="295px" width="295px">
+    <img class ="slideshow" src="../images/naruto.jpg" alt="Fire" height="295px" width="295px">
+    </body>
+    <script>
+            var slideIndex = 0;
+            showDivs();
+            
+            function showDivs() {
+                var i;
+              var x = document.getElementsByClassName("slideshow");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > x.length) {slideIndex = 1}
+              x[slideIndex-1].style.display = "block";
+              setTimeout(showDivs, 2800);
+            }
+            
+            </script>
+            
+    </html>

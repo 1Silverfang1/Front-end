@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My-new-page</title>
+    <body>
+    <img class ="slideshow w3-animate-bottom" src="../images/Firedragon.jpg" alt="Fire" height="295px" width="660px">
+    <img class ="slideshow w3-animate-bottom" src="../images/Dragon.jpg" alt="Fire" height="295px" width="660px">
+    <img class ="slideshow w3-animate-bottom" src="../images/igneel.jpg" alt="Fire" height="295px" width="660px">
+    <img class ="slideshow w3-animate-bottom" src="../images/ichigo.jpg" alt="Fire" height="295px" width="660px">
+    <img class ="slideshow w3-animate-bottom" src="../images/ichigo3.jpg" alt="Fire" height="295px" width="660px">
+    <img class ="slideshow w3-animate-bottom" src="../images/ichigo4.jpg" alt="Fire" height="295px" width="660px">
+    <img class ="slideshow w3-animate-bottom" src="../images/ichigo6.jpg" alt="Fire" height="295px" width="660px">
+    <img class ="slideshow w3-animate-bottom" src="../images/ichigo7.jpg" alt="Fire" height="295px" width="660px">
+    <img class ="slideshow w3-animate-top" src="../images/middleframenaruto.jpeg" alt="Fire" height="295px" width="660px">
+    </body>
+    <script>
+            var slideIndex = 0;
+            showDivs();
+            
+            function showDivs() {
+                var i;
+              var x = document.getElementsByClassName("slideshow");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > x.length) {slideIndex = 1}
+              x[slideIndex-1].style.display = "block";
+              setTimeout(showDivs, 2900);
+            }
+            
+            </script>
+            
+    </html>

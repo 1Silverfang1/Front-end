@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="CSS/surveyformcss.css">
+</head>
+<body>
+  <div class ="main">
+    <div class ="topNavigationBar">
+        <ul>
+            <li >
+                    <i class="fa fa-home" aria-hidden="true"></i><a href="#">Home</a></li>
+            <li><i class="fa fa-bolt" aria-hidden="true"></i><a href="#">New Anime</a></li>  
+             <li><i class="fa fa-list" aria-hidden="true"></i>Anime List
+            </li>
+            <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i>Contact Us</li>
+            <li> <i class="fa fa-handshake-o" aria-hidden="true"></i>About us</li>
+            <li> <i class="fa fa-thumbs-up" aria-hidden="true"></i><a href="Tribute.html">Pay tribute</a></li>
+            <li ><i class="fa fa-calculator" aria-hidden="true"></i><a href="SignUp.html">Sign Up</a></li>
+            <li id = "active" ><i class="fa fa-money" aria-hidden="true"></i><a href="surveyform.html">Survey</a></li>
+        </ul>
+        </div>    
+    <div class ="form">
+  <h1 id ="title">Survey Form</h1>
+  <br><br><br><br>
+  <p id="description"> For Animation</p>
+  <form action="" id="survey-form" >    
+        <div class ="textbox">
+  <label for="name" id ="name-label">First Name</label>
+    <input type="text" id="name" placeholder ="Enter your First Name" required>
+    </div>
+    <br>
+    <div class ="textbox">
+    <label for="text" id ="name-label">Last Name</label>
+    <input type="text" id="name" placeholder="Enter your Last Name" required>
+    </div>
+    <br>
+    <div class ="textbox"> 
+           <label for="email" id ="email-label">Email</label>
+    <input type="email" id="email" placeholder="Enter your Mail Id" required>
+    </div>
+    <br>
+    <div class ="textbox">
+        <label for="number" id ="number-label">Number</label>
+    <input type="text" id="number" required placeholder="Enter Your Mobile Number">
+    </div>
+    <br>
+    <div class ="dropdown" >
+    <label for="number" id ="time">Time Spent</label>
+    <select name="cars" id="dropdown">
+  <option   id ="opt"value="0">Select Time Spent</option>      
+  <option  id ="opt" value="1">Less Than 2 hour</option>
+  <option   id ="opt" value="2">4 hour</option>
+  <option   id ="opt" value="3">6 hour</option>
+  <option   id ="opt" value="4">More Than 8 hour</option>
+</select>
+</div>
+<div class ="textbox4">
+    <p>Gender</p>
+    <label class="container">Male
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Female
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Other
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Don't want to disclose
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+</div>
+<div class ="textbox">
+    <p>Choose your need</p>
+        <label class="container1">Want to Try New Genre
+                <input type="checkbox" checked="checked">
+                <span class="checkmark1"></span>
+              </label>
+              
+              <label class="container1">Don't Want to Try New Genre
+                <input type="checkbox">
+                <span class="checkmark1"></span>
+              </label>
+              
+              <label class="container1">Don't Know 
+                <input type="checkbox">
+                <span class="checkmark1"></span>
+              </label>
+              
+              <label class="container1">Need Help with Recommendation
+                <input type="checkbox">
+                <span class="checkmark1"></span>
+              </label> 
+</div>
+<div class ="textboxd">
+     <textarea rows="4" cols="50">
+</textarea>
+</div>
+<button type="submit" id ="submit" value="Submit" class="buttonstyle">Submit</button>
+</form>
+  </div>
+</div>
+</body>
+</html>
