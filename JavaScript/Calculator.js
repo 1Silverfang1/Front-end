@@ -63,7 +63,10 @@ function remove()
 {       
 let string = document.getElementById('output').value;
 tempNumber=string.substring(0,string.length-1);
+if(tempNumber.length>=1)
 document.getElementById('output').value=tempNumber;
+else
+document.getElementById('output').value=0;
 }
 
 
