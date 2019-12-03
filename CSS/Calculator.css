@@ -1,0 +1,72 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.calculator
+{
+    background: #333;
+    width : 400px;
+    margin-top: 2px;
+    margin-left: 32%;
+}
+.calculator .screen
+{
+    background:#333;
+    height: 85px;
+    
+}
+.calculator-buttons
+{
+    padding-left: 2px;
+}
+
+.calculator-buttons-row
+{
+margin: 0px;
+font-size: 0;
+width: 100%;
+padding: 0px;
+}
+#cal-button
+{
+    background-color: #d8d9db;
+    color: black;
+    height: 100px;
+    width: 25.1%;
+    margin-left: -1px;
+    letter-spacing: 1px;
+    border-radius: 0;
+    font-size: 25px;
+    cursor: pointer;
+}
+#cal-button-2
+{
+    background-color: #d8d9db;
+    color: black;
+    height: 100px;
+    width: 50.1%;
+    padding: 0%;
+    margin-left: -1px;
+    border-radius: 0;
+    font-size: 25px;
+    cursor: pointer;
+}
+#cal-button-3
+{
+    background-color: #d8d9db;
+    color: black;
+    height: 100px;
+    width: 74.6%;
+    padding: 0%;
+    border-radius: 0;
+    font-size: 25px;
+    cursor: pointer;
+}
+.screen .forms
+{
+    font-size: 20px;
+    width: 96%;
+    height: 85px;
+    text-align: right;
+}

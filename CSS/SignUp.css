@@ -1,12 +1,7 @@
-*
-{ 
-    font-family: sans-serif;
-
-}
 body{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+  
     background:#101010; 
 }
 .topNavigationBar a
@@ -21,7 +16,7 @@ body{
 .topNavigationBar
 {
     background: #333;
-    font-family: sans-serif;
+  
     position: fixed;
     top: 2px;
    
@@ -34,7 +29,7 @@ body{
 {
     list-style: none;
     line-height: 50px;
-    font-family: sans-serif;
+  
     width: 100%;
     padding: 0%;
     margin: 0%;
@@ -44,7 +39,7 @@ body{
 {
     float: left;
     text-align: center;
-    font-family: sans-serif;
+
     text-decoration: none;
     min-width: 165px;
     font-size: 15px;
@@ -79,7 +74,7 @@ body{
     text-align: center;
 
 }
-.btn
+.button
 {
     width: 100%;
     background: none;
