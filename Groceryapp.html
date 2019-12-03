@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+ 
+  <link rel="stylesheet" href="CSS/Grocery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="JavaScript/grocery.js"></script>
+
+</head>
+<body>
+        <div class ="topNavigationBar">
+                <ul>
+                    <li >
+                            <i class="fa fa-home" aria-hidden="true"></i><a href="#">Home</a></li>
+                    <li><i class="fa fa-bolt" aria-hidden="true"></i><a href="#">New Anime</a></li>  
+                     <li><i class="fa fa-list" aria-hidden="true"></i><a href="SignUp.html">Sign Up</a>
+                    </li>
+                    <li  id = "active"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>Grocery App</li>
+                    <li> <i class="fa fa-handshake-o" aria-hidden="true"></i>About us</li>
+                    <li> <i class="fa fa-thumbs-up" aria-hidden="true"></i><a href="Tribute.html">Pay tribute</a></li>
+                    <li  ><i class="fa fa-calculator" aria-hidden="true"></i><a href="Calculator.html">Calculator</a></li>
+                    <li ><i class="fa fa-money" aria-hidden="true"></i><a href="surveyform.html">Survey</a></li>
+                </ul>
+                </div>    
+                <br><br>
+                <div class ="listItems">
+                   <label for="itemName">Item Name</label> <textarea id="itemName" cols="25" rows="1"required  autocomplete="off"></textarea>
+                    <label for="itemsPrice"> Price</label><input type="number" id="itemsPrice" required min="0">
+                    <label for="itemsQuantity">Quantity</label><input type="number" id="itemsQuantity" min="0" max="100" required>
+                    <button id="addItems" onclick="cartAdder()">Add Item to Cart</button>
+                </div>
+        <div class="cart">
+    <h1>Grocery Items</h1>
+    <table id="cartTable">
+        <tr>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>Item Quantity</th>
+            <th>Total Price</th>
+            <th>Remove</th>
+            <th>Edit</th>
+        </tr>
+    </table>
+ 
+</div>
+<div class ="finalBill">
+<table id ="finalcheckout">
+        <tr>
+                <th id ="billColumn1">Your Bill</th>
+                <th>
+                <input type="text" id="billCart" autocomplete="off">
+                </th>
+            </tr>
+</table>
+</div>
+</body>
+</html>

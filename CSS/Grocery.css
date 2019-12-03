@@ -1,0 +1,113 @@
+
+.topNavigationBar a
+{
+    text-decoration: none;
+  color: aliceblue;
+}
+#itemColumn
+{
+    background: none;
+    border: none;
+}
+.topNavigationBar ul :hover
+{
+    background-color:   #47d147;
+}
+
+#billColumn1
+{
+    width: 76.5%;
+}
+.finalBill table
+{
+    width: 100%;
+}
+.finalBill
+{
+    width: 100%;
+
+}
+.active
+{
+    background-color: #47d147;
+    color: #47d147;
+}
+.topNavigationBar i
+{
+    text-align: center;
+    padding-right: 5px;
+}
+
+.topNavigationBar
+{
+    background: #333;
+    font-family: sans-serif;
+    position: fixed;
+    width: auto;
+    top: 2px;
+   
+}
+#active
+{
+    background: #47d147;
+}
+.topNavigationBar ul
+{
+    list-style: none;
+    line-height: 50px;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.topNavigationBar ul li
+{
+    float: left;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    min-width: 160px;
+    font-size: 15px;
+    padding-left: 5px;
+    color: #e6e6e6;
+    background: #333;
+}
+
+.listItems
+{
+    padding-top: 25px;
+}
+.listItems label
+{
+    color: royalblue;
+    padding-left: 25px;
+}
+#itemname
+{
+    margin-top: 25px;
+    padding-top: 5px;
+}
+.listItems #itemname
+{
+    color: green;
+text-align: bottom;
+}
+.cart h1
+{
+    text-align: center;
+    background: #333;
+}
+.cart
+{
+    width: 100%;
+  
+}
+.cart table
+{
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+  }

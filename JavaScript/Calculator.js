@@ -12,9 +12,10 @@ function insert(num)
         tempNumber=num;
     }   
 }
-let number1, number2,choice;
+let number1, number2,choice="";
 function firstValue()
 {
+
     number1=document.getElementById('output').value;
     document.getElementById('output').value=0;
     tempNumber=0;
@@ -33,6 +34,7 @@ function solver()
                 number2=document.getElementById('output').value;
                 document.getElementById('output').value=parseInt(number1)+parseInt(number2);
                 tempNumber=0;
+                choice="";
                  break;
             }
         case "substractionChoice":
@@ -40,6 +42,7 @@ function solver()
                 number2=document.getElementById('output').value;
                 document.getElementById('output').value=parseInt(number1)-parseInt(number2);
                 tempNumber=0;
+                choice="";
                  break;
 
             }
@@ -48,6 +51,7 @@ function solver()
                 number2=document.getElementById('output').value;
                 document.getElementById('output').value=parseInt(number1)/parseInt(number2);
                 tempNumber=0;
+                choice="";
                  break;
             }
         case "multiplicationChoice":
@@ -55,6 +59,7 @@ function solver()
                 number2=document.getElementById('output').value;
                 document.getElementById('output').value=parseInt(number1)*parseInt(number2);
                 tempNumber=0;
+                choice="";
                  break;
             }
     }
@@ -68,26 +73,85 @@ document.getElementById('output').value=tempNumber;
 else
 document.getElementById('output').value=0;
 }
+function expressionsolve(newChoice)
+{
+switch(newChoice)
+{
 
-
+    case "additionChoice":
+        {
+            let newnum1= document.getElementById('output').value;
+            number1=parseInt(newnum1)+parseInt(number1);
+            break;
+        }
+        case "substractionChoice":
+                {
+                    let newnum1= document.getElementById('output').value;
+                    number1=parseInt(number1)-parseInt(newnum1);
+                    break;
+                }
+                case "multiplicationChoice":
+                        {
+                            let newnum1= document.getElementById('output').value;
+                            number1=parseInt(newnum1)*parseInt(number1);
+                            break;
+                        }
+                        case "divisionChoice":
+                                {
+                                    let newnum1= document.getElementById('output').value;
+                                    number1=parseInt(number1)/parseInt(newnum1);
+                                    break;
+                                }
+}
+}
 function addition()
 {
+    if(choice.length==0)
+    {
 firstValue();
-choice="additionChoice";
+    }
+    else
+    {
+        expressionsolve(choice);
+        document.getElementById('output').value=0;
+        tempNumber=0;
+    }
+    choice="additionChoice";
 }
 function substraction()
 {
+    if(choice.length==0)
    firstValue();
+   else
+   {
+   expressionsolve(choice)
+   document.getElementById('output').value=0;
+   tempNumber=0;
+}
    choice="substractionChoice";
 }
 
 function multiplication()
 {
+    if(choice.length==0)
    firstValue();
+   else
+   {
+   expressionsolve(choice)
+   document.getElementById('output').value=0;
+   tempNumber=0;
+}
    choice="multiplicationChoice"
 }
 function division()
 {
+    if(choice.length==0)
     firstValue();
+    else
+    {
+    expressionsolve(choice)
+    document.getElementById('output').value=0;    
+    tempNumber=0;    
+}
     choice ="divisionChoice";
 }
