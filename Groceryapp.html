@@ -12,6 +12,7 @@
 
 </head>
 <body>
+    <div class ="main">
         <div class ="topNavigationBar">
                 <ul>
                     <li >
@@ -27,35 +28,39 @@
                 </ul>
                 </div>    
                 <br><br>
+                <h1 style="text-align: center;" id ="heading"><i class="fa fa-shopping-bag" size=15px aria-hidden="true"></i>Grocery Items</h1>
                 <div class ="listItems">
-                   <label for="itemName">Item Name</label> <textarea id="itemName" cols="25" rows="1"required  autocomplete="off"></textarea>
-                    <label for="itemsPrice"> Price</label><input type="number" id="itemsPrice" required min="0">
-                    <label for="itemsQuantity">Quantity</label><input type="number" id="itemsQuantity" min="0" max="100" required>
-                    <button id="addItems" onclick="cartAdder()">Add Item to Cart</button>
+               <table>
+                    <th><textarea id="itemName" cols="25" rows="1"required placeholder="Item Name" autocomplete="off"></textarea></th>
+                  <th> <label for="itemsPrice"> Price</label>&nbsp;&nbsp;<input type="number" id="itemsPrice"  required min="0"oninput="validity.valid||(value='');"></th>
+                 <th>   <label for="itemsQuantity">Quantity</label>&nbsp;&nbsp;<input type="number" id="itemsQuantity" min="0" max="100" required oninput="validity.valid||(value='');"></th>
+                  <th>  <button id="addItems" onclick="cartAdder()"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add Items</button></th>
+                </table>
                 </div>
         <div class="cart">
-    <h1>Grocery Items</h1>
+    <h1 style="color:#4CAF50;;"><i class="fa fa-cart-arrow-down" size=15px aria-hidden="true"></i>Your Cart</h1>
     <table id="cartTable">
         <tr>
             <th>Item Name</th>
             <th>Item Price</th>
             <th>Item Quantity</th>
             <th>Total Price</th>
-            <th>Remove</th>
-            <th>Edit</th>
+            <th colspan="2">Change Order</th>
         </tr>
     </table>
  
 </div>
+<br><br><hr>
 <div class ="finalBill">
 <table id ="finalcheckout">
         <tr>
                 <th id ="billColumn1">Your Bill</th>
                 <th>
-                <input type="text" id="billCart" autocomplete="off">
+                <input type="text" id="billCart" autocomplete="off" readonly>
                 </th>
             </tr>
 </table>
+</div>
 </div>
 </body>
 </html>

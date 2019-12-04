@@ -5,6 +5,11 @@ function newcart(currentId,totalChange)
     let curItemPrice    = document.getElementById("newColumn2"+currentId).value;
     let curItemQuantity = document.getElementById("newColumn3"+currentId).value ;
     let currentCart=document.getElementById('billCart').value;
+    if(curItemName.length==0||curItemPrice.length==0||curItemQuantity==0)
+    {
+        alert("Please Enter valid field");
+        return;
+    }
      let newtotalPrice=parseInt(curItemPrice)*parseInt(curItemQuantity);
    currentCart=parseInt(currentCart)-parseInt(totalChange);
    currentCart=parseInt(currentCart)+parseInt(newtotalPrice); 
@@ -13,7 +18,7 @@ function newcart(currentId,totalChange)
     document.getElementById(currentId).childNodes[0].textContent=curItemName;
     document.getElementById(currentId).childNodes[1].textContent=curItemPrice;
     document.getElementById(currentId).childNodes[2].textContent=curItemQuantity;
-    document.getElementById(currentId).childNodes[5].innerHTML="<button id='edit' onclick= 'editCurrentRow("+currentId+")'>Edit</button>"
+    document.getElementById(currentId).childNodes[5].innerHTML="<button id='editButton' onclick= 'editCurrentRow("+currentId+")'><i class='fa fa-pencil' aria-hidden= true ></i>Edit</button>"
 }
 function editCurrentRow(currentId)
 {
@@ -24,7 +29,7 @@ function editCurrentRow(currentId)
       document.getElementById(currentId).childNodes[0].innerHTML="<textarea id=newColumn1"+currentId+" cols="+25+" rows="+1+" required>"+curItemName+"</textarea>";
     document.getElementById(currentId).childNodes[1].innerHTML="<input id= newColumn2"+currentId+" type=number min= 0 oninput= validity.valid||(value=''); required value="+curItemPrice+">";
    document.getElementById(currentId).childNodes[2].innerHTML="<input id= newColumn3"+currentId+" type=number min =0 oninput= validity.valid||(value=''); required value="+curItemQuantity+">";
-    document.getElementById(currentId).childNodes[5].innerHTML="<button id= newsavebutton onClick= newcart("+currentId+","+totalChange+")>Save</button>"; 
+    document.getElementById(currentId).childNodes[5].innerHTML="<button id= saveButton onClick= newcart("+currentId+","+totalChange+")><i class='fa fa-check' aria-hidden=true></i>Save</button>"; 
 }
 function removeCurrentRow(currentId)
 {
@@ -46,9 +51,11 @@ function cartAdder()
         alert("Null Values are not Permitted");
         return;
     }
-   if(parseInt(curItemPrice)<0||parseInt(curItemQuantity)<0)
+    let checkPrice=parseInt(curItemPrice);
+    let checkQuantity=parseInt(curItemQuantity);
+   if(checkPrice<1||checkQuantity<1)
    {
-    alert("Negative values are not Permitted");
+    alert("Negative values or Zero values are not Permitted");
     return;
    }
     let curTable=document.getElementById('cartTable');
@@ -64,9 +71,8 @@ function cartAdder()
     cell2.innerText=curItemPrice;
     cell3.innerText=curItemQuantity;
     cell4.innerText=totaPrice;
-
-     cell5.innerHTML= "<button id='remove' onclick= 'removeCurrentRow("+currentRowId+")'>Remove</button>"
-      cell6.innerHTML= "<button id='edit' onclick= 'editCurrentRow("+currentRowId+")'>Edit</button>"
+    cell5.innerHTML= "<button id='removeButton' onclick= 'removeCurrentRow("+currentRowId+")'> <i class='fa fa-trash' aria-hidden= true ></i>Remove</button>"
+    cell6.innerHTML= "<button id='editButton' onclick= 'editCurrentRow("+currentRowId+")'><i class='fa fa-pencil' aria-hidden= true ></i>Edit</button>"
     document.getElementById('itemName').value="";
     document.getElementById('itemsPrice').value="";
     document.getElementById('itemsQuantity').value="";

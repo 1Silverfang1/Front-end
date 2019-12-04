@@ -9,6 +9,14 @@
     background: none;
     border: none;
 }
+.cart i{
+    padding-right: 15px;
+}
+#billCart
+{
+    border: none;
+    background: #ccccff;
+}
 .topNavigationBar ul :hover
 {
     background-color:   #47d147;
@@ -17,6 +25,8 @@
 #billColumn1
 {
     width: 76.5%;
+    text-align: right;
+    padding-right: 5px;
 }
 .finalBill table
 {
@@ -73,25 +83,132 @@
     color: #e6e6e6;
     background: #333;
 }
-
+.listItems table
+{
+    text-align: center;
+    width: 100%;
+}
 .listItems
 {
-    padding-top: 25px;
+    margin-top: 25px;
+    height: 130px;
+    width: 100%;
+    object-fit:cover;
+    text-align: center;
+}
+#itemsPrice
+{
+    font-size: 15px;
+}
+.listItems i
+{
+    padding-right: 10px;
+}
+#saveButton
+{
+    margin-top: 1%;
+    font-size: 15px;
+    width: 110px;
+    height: 25px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    background: #ccccff;
+    border: 2px solid #4CAF50;
+}
+
+#removeButton
+{
+    margin-top: 1%;
+    font-size: 15px;
+    width: 110px;
+    height: 25px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    background: #ccccff;
+    border: 2px solid #4CAF50;
+}
+#saveButton i{
+    padding-right: 10px;
+}
+#removeButton i
+{
+    padding-right: 10px;
+}
+#saveButton:hover
+{
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+#removeButton:hover
+{
+    background-color: #ff0000;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+#editButton
+{
+    margin-top: 1%;
+    font-size: 15px;
+    width: 110px;
+    height: 25px;
+    font-family: sans-serif;
+    border-radius: 10px;
+ background: #ccccff;
+    border: 2px solid #4CAF50;
+}
+#editButton:hover
+{
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+#editButton i
+{
+        padding-right: 10px;  
+}
+
+#addItems
+{
+    margin-top: 3%;
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    background: white;
+    border: 2px solid #4CAF50;
+}
+#addItems:hover
+{
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
 }
 .listItems label
 {
     color: royalblue;
-    padding-left: 25px;
 }
-#itemname
+#itemsPrice , #itemsQuantity
 {
-    margin-top: 25px;
+    line-height: 35px;
+}
+#heading i
+{
+padding-right: 15px;
+}
+#itemName
+{
+    margin-top: 10px;
     padding-top: 5px;
-}
-.listItems #itemname
-{
-    color: green;
-text-align: bottom;
+    line-height: 25px;
+    font-size: 15px;
+    font-family: serif;
+    background: #ccccff;
 }
 .cart h1
 {
@@ -107,7 +224,12 @@ text-align: bottom;
 {
     width: 100%;
 }
+table th
+{
+    border: 1px solid red;
+}
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #333;
     text-align: center;
+    background: #ccccff;
   }
