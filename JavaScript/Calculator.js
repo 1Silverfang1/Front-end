@@ -81,24 +81,32 @@ switch(newChoice)
     case "additionChoice":
         {
             let newnum1= document.getElementById('output').value;
+            if(newnum1==0)
+            return;
             number1=parseInt(newnum1)+parseInt(number1);
             break;
         }
         case "substractionChoice":
                 {
                     let newnum1= document.getElementById('output').value;
+                    if(newnum1==0)
+            return;
                     number1=parseInt(number1)-parseInt(newnum1);
                     break;
                 }
                 case "multiplicationChoice":
                         {
                             let newnum1= document.getElementById('output').value;
+                            if(newnum1==0)
+            return;
                             number1=parseInt(newnum1)*parseInt(number1);
                             break;
                         }
                         case "divisionChoice":
                                 {
                                     let newnum1= document.getElementById('output').value;
+                                    if(newnum1==0)
+            return;
                                     number1=parseInt(number1)/parseInt(newnum1);
                                     break;
                                 }

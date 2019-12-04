@@ -29,12 +29,16 @@
                 </tr>
                 </table>
                 </div>    
-                <br><br><br><br><br>
+                <br>
+                <div class="head">
+                    <img src="images/11test.jpg" alt="" style="width: 100%;">
+                    <br><br>
                 <h1 style="text-align: center;" id ="heading"><i class="fa fa-shopping-bag" size=15px aria-hidden="true"></i>Grocery Items</h1>
-                <div class ="listItems">
+            </div>
+               <div class ="listItems">
                <table>
                     <th id ="listItemsName"><label for="itemsName" id ="labelItemName">Name of the Item</label>&nbsp;&nbsp;&nbsp;<input id="itemName" type="text" placeholder="Item Name" autocomplete="off"></th>
-                  <th id ="listItemPrice"> <label for="itemsPrice" id ="labelItemPrice"> Price</label>&nbsp;&nbsp;<input type="number" id="itemsPrice"  required min="0"oninput="validity.valid||(value='');"></th>
+                  <th id ="listItemPrice"> <label for="itemsPrice" id ="labelItemPrice"> Price</label>&nbsp;&nbsp;<input type="number" id="itemsPrice" step='.01'  required min="0"oninput="validity.valid||(value='');"></th>
                  <th id ="listItemQunatity" > <label for="itemsQuantity" id ="labelItemQuantity">Quantity</label>&nbsp;&nbsp;<input type="number" id="itemsQuantity" min="0" max="100" required oninput="validity.valid||(value='');"></th>
                   <th id ="listButton" >  <button id="addItems" onclick="cartAdder()"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add Items</button></th>
                 </table>

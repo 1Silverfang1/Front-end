@@ -10,11 +10,11 @@ function newcart(currentId,totalChange)
         alert("Please Enter valid field");
         return;
     }
-     let newtotalPrice=parseInt(curItemPrice)*parseInt(curItemQuantity);
-   currentCart=parseInt(currentCart)-parseInt(totalChange);
-   currentCart=parseInt(currentCart)+parseInt(newtotalPrice); 
+     let newtotalPrice=parseFloat(curItemPrice)*parseFloat(curItemQuantity);
+   currentCart=parseFloat(currentCart)-parseFloat(totalChange);
+   currentCart=parseFloat(currentCart)+parseFloat(newtotalPrice); 
    document.getElementById(currentId).childNodes[3].innerText=newtotalPrice;
-    document.getElementById('billCart').value=currentCart;
+    document.getElementById('billCart').value=currentCart.toFixed(2);
     document.getElementById(currentId).childNodes[0].textContent=curItemName;
     document.getElementById(currentId).childNodes[1].textContent=curItemPrice;
     document.getElementById(currentId).childNodes[2].textContent=curItemQuantity;
@@ -25,10 +25,10 @@ function editCurrentRow(currentId)
     let curItemName     = document.getElementById(currentId).childNodes[0].textContent;
     let curItemPrice    = document.getElementById(currentId).childNodes[1].textContent;
     let curItemQuantity = document.getElementById(currentId).childNodes[2].textContent;  
-    let totalChange=parseInt(curItemPrice)*parseInt(curItemQuantity);
+    let totalChange=parseFloat(curItemPrice)*parseFloat(curItemQuantity);
       document.getElementById(currentId).childNodes[0].innerHTML="<textarea id=newColumn1"+currentId+" cols="+25+" rows="+1+" required>"+curItemName+"</textarea>";
-    document.getElementById(currentId).childNodes[1].innerHTML="<input id= newColumn2"+currentId+" type=number min= 0 oninput= validity.valid||(value=''); required value="+curItemPrice+">";
-   document.getElementById(currentId).childNodes[2].innerHTML="<input id= newColumn3"+currentId+" type=number min =0 oninput= validity.valid||(value=''); required value="+curItemQuantity+">";
+    document.getElementById(currentId).childNodes[1].innerHTML="<input id= newColumn2"+currentId+" type=number min= 0 oninput= validity.valid||(value=''); step='.01' required value="+curItemPrice+">";
+   document.getElementById(currentId).childNodes[2].innerHTML="<input id= newColumn3"+currentId+" type=number min =0 oninput= validity.valid||(value='');required value="+curItemQuantity+">";
     document.getElementById(currentId).childNodes[5].innerHTML="<button id= saveButton onClick= newcart("+currentId+","+totalChange+")><i class='fa fa-check' aria-hidden=true></i>Save</button>"; 
 }
 function removeCurrentRow(currentId)
@@ -36,8 +36,8 @@ function removeCurrentRow(currentId)
     
     let currentCart=document.getElementById('billCart').value;
     let currentPrice=document.getElementById(currentId).childNodes[3].innerText
-    currentCart=parseInt(currentCart)-parseInt(currentPrice);
-    document.getElementById('billCart').value=currentCart;
+    currentCart=parseFloat(currentCart)-parseFloat(currentPrice);
+    document.getElementById('billCart').value=currentCart.toFixed(2);
     document.getElementById(currentId).remove();
 }
 function cartAdder()
@@ -45,14 +45,14 @@ function cartAdder()
     let curItemName= document.getElementById('itemName').value;
     let curItemPrice= document.getElementById('itemsPrice').value;
     let curItemQuantity=document.getElementById('itemsQuantity').value;
-    let totaPrice= parseInt(curItemPrice)*parseInt(curItemQuantity);
+    let totaPrice= parseFloat(curItemPrice)*parseFloat(curItemQuantity);
     if(curItemName.length==0||curItemPrice.length==0||curItemQuantity.length==0)
     {
         alert("Null Values are not Permitted");
         return;
     }
-    let checkPrice=parseInt(curItemPrice);
-    let checkQuantity=parseInt(curItemQuantity);
+    let checkPrice=parseFloat(curItemPrice);
+    let checkQuantity=parseFloat(curItemQuantity);
    if(checkPrice<1||checkQuantity<1)
    {
     alert("Negative values or Zero values are not Permitted");
@@ -78,9 +78,9 @@ function cartAdder()
     document.getElementById('itemsQuantity').value="";
     let curCartVal= document.getElementById('billCart').value;
     if(curCartVal.length!=0)
-    curCartVal=parseInt(curCartVal)+parseInt(totaPrice);
+    curCartVal=parseFloat(curCartVal)+parseFloat(totaPrice);
     else
     curCartVal=totaPrice;
-    document.getElementById('billCart').value=curCartVal;
+    document.getElementById('billCart').value=curCartVal.toFixed(2);
     currentRowId++;
 }

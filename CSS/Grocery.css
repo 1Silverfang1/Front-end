@@ -4,6 +4,7 @@
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
 }
+
 .topNavigationBar a
 {
     text-decoration: none;
@@ -103,7 +104,7 @@
 .listItems table th
 {
     text-align: center;
-    border: 1px solid green;
+    border: 3px solid black;
     width: 100%;
 }
 .listItems
@@ -143,6 +144,10 @@
     border-radius: 10px;
     background: #ccccff;
     border: 2px solid #4CAF50;
+}
+body{
+    background-image: url(../images/imageedit_4_9789916366.png);
+    
 }
 #saveButton i{
     padding-right: 10px;
@@ -224,7 +229,7 @@
 }
 .listItems label
 {
-    color: royalblue;
+    color: black;
 }
 #itemsPrice , #itemsQuantity
 {
@@ -249,11 +254,12 @@ padding-right: 15px;
 .cart h1
 {
     text-align: center;
-    background: #333;
+     background: #333;
 }
 .cart
 {
     width: 100%;
+
   
 }
 .cart table
@@ -262,7 +268,7 @@ padding-right: 15px;
 }
 .cart table tr th 
 {
-    border: 1px solid black;
+    border: 3px solid black;
 }
 
 .cart table tr td 

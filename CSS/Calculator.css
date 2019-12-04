@@ -3,17 +3,21 @@
     margin-left: 0;
     padding: 0;
 }
+.special
+{
+    background: #df974c;    
+} 
 .calculator
 {
-    background: #333;
-    width : 400px;
-    margin-top: 70px;
+    background: #df974c;
+    width : 35%;
+    margin-top: 5%;
     margin-left: 32%;
 }
 .calculator .screen
 {
     background:#333;
-    height: 90px;
+
     
 }
 .calculator-buttons
@@ -27,6 +31,19 @@ margin: 0px;
 font-size: 0;
 width: 100%;
 padding: 0px;
+}
+#cal-button-1
+
+{
+    background: #df974c;
+    color: white;
+    height: 90px;
+    width: 25.1%;
+    margin-left: -1px;
+    letter-spacing: 1px;
+    border-radius: 0;
+    font-size: 25px;
+    cursor: pointer;
 }
 #cal-button
 {
