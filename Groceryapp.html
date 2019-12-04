@@ -14,27 +14,29 @@
 <body>
     <div class ="main">
         <div class ="topNavigationBar">
-                <ul>
-                    <li >
-                            <i class="fa fa-home" aria-hidden="true"></i><a href="#">Home</a></li>
-                    <li><i class="fa fa-bolt" aria-hidden="true"></i><a href="#">New Anime</a></li>  
-                     <li><i class="fa fa-list" aria-hidden="true"></i><a href="SignUp.html">Sign Up</a>
-                    </li>
-                    <li  id = "active"><i class="fa fa-volume-control-phone" aria-hidden="true"></i>Grocery App</li>
-                    <li> <i class="fa fa-handshake-o" aria-hidden="true"></i>About us</li>
-                    <li> <i class="fa fa-thumbs-up" aria-hidden="true"></i><a href="Tribute.html">Pay tribute</a></li>
-                    <li  ><i class="fa fa-calculator" aria-hidden="true"></i><a href="Calculator.html">Calculator</a></li>
-                    <li ><i class="fa fa-money" aria-hidden="true"></i><a href="surveyform.html">Survey</a></li>
-                </ul>
+                <table>
+                    <tr>
+                    <th>
+                        <i class="fa fa-home" aria-hidden="true"></i><a href="#">Home</a></th>
+                    <th><i class="fa fa-bolt" aria-hidden="true"></i><a href="#">New Anime</a></th>  
+                     <th><i class="fa fa-list" aria-hidden="true"></i><a href="SignUp.html">Sign Up</a>
+                     </th>
+                    <th  id = "active"><i class="fa fa-volume-control-phone" aria-hidden="true"></i><a href="Groceryapp.html">Grocery App</a></th>
+                    <th> <i class="fa fa-handshake-o" aria-hidden="true"></i><a>About us</a></th>
+                    <th> <i class="fa fa-thumbs-up" aria-hidden="true"></i><a href="Tribute.html">Pay tribute</a></th>
+                    <th  ><i class="fa fa-calculator" aria-hidden="true"></i><a href="Calculator.html">Calculator</a></th>
+                    <th ><i class="fa fa-money" aria-hidden="true"></i><a href="surveyform.html">Survey</a></th>
+                </tr>
+                </table>
                 </div>    
-                <br><br>
+                <br><br><br><br><br>
                 <h1 style="text-align: center;" id ="heading"><i class="fa fa-shopping-bag" size=15px aria-hidden="true"></i>Grocery Items</h1>
                 <div class ="listItems">
                <table>
-                    <th><textarea id="itemName" cols="25" rows="1"required placeholder="Item Name" autocomplete="off"></textarea></th>
-                  <th> <label for="itemsPrice"> Price</label>&nbsp;&nbsp;<input type="number" id="itemsPrice"  required min="0"oninput="validity.valid||(value='');"></th>
-                 <th>   <label for="itemsQuantity">Quantity</label>&nbsp;&nbsp;<input type="number" id="itemsQuantity" min="0" max="100" required oninput="validity.valid||(value='');"></th>
-                  <th>  <button id="addItems" onclick="cartAdder()"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add Items</button></th>
+                    <th id ="listItemsName"><label for="itemsName" id ="labelItemName">Name of the Item</label>&nbsp;&nbsp;&nbsp;<input id="itemName" type="text" placeholder="Item Name" autocomplete="off"></th>
+                  <th id ="listItemPrice"> <label for="itemsPrice" id ="labelItemPrice"> Price</label>&nbsp;&nbsp;<input type="number" id="itemsPrice"  required min="0"oninput="validity.valid||(value='');"></th>
+                 <th id ="listItemQunatity" > <label for="itemsQuantity" id ="labelItemQuantity">Quantity</label>&nbsp;&nbsp;<input type="number" id="itemsQuantity" min="0" max="100" required oninput="validity.valid||(value='');"></th>
+                  <th id ="listButton" >  <button id="addItems" onclick="cartAdder()"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add Items</button></th>
                 </table>
                 </div>
         <div class="cart">
