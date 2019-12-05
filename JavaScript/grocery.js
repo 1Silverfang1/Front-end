@@ -11,6 +11,7 @@ function newcart(currentId,totalChange)
         return;
     }
      let newtotalPrice=parseFloat(curItemPrice)*parseFloat(curItemQuantity);
+     newtotalPrice.toFixed(2);
    currentCart=parseFloat(currentCart)-parseFloat(totalChange);
    currentCart=parseFloat(currentCart)+parseFloat(newtotalPrice); 
    document.getElementById(currentId).childNodes[3].innerText=newtotalPrice;
@@ -46,6 +47,7 @@ function cartAdder()
     let curItemPrice= document.getElementById('itemsPrice').value;
     let curItemQuantity=document.getElementById('itemsQuantity').value;
     let totaPrice= parseFloat(curItemPrice)*parseFloat(curItemQuantity);
+    totaPrice.toFixed(2);
     if(curItemName.length==0||curItemPrice.length==0||curItemQuantity.length==0)
     {
         alert("Null Values are not Permitted");
@@ -53,7 +55,7 @@ function cartAdder()
     }
     let checkPrice=parseFloat(curItemPrice);
     let checkQuantity=parseFloat(curItemQuantity);
-   if(checkPrice<1||checkQuantity<1)
+   if(checkPrice<0||checkQuantity<1)
    {
     alert("Negative values or Zero values are not Permitted");
     return;
@@ -70,7 +72,7 @@ function cartAdder()
     cell1.innerText=curItemName;
     cell2.innerText=curItemPrice;
     cell3.innerText=curItemQuantity;
-    cell4.innerText=totaPrice;
+    cell4.innerText=totaPrice.toFixed(2);
     cell5.innerHTML= "<button id='removeButton' onclick= 'removeCurrentRow("+currentRowId+")'> <i class='fa fa-trash' aria-hidden= true ></i>Remove</button>"
     cell6.innerHTML= "<button id='editButton' onclick= 'editCurrentRow("+currentRowId+")'><i class='fa fa-pencil' aria-hidden= true ></i>Edit</button>"
     document.getElementById('itemName').value="";

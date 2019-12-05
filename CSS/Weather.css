@@ -1,0 +1,84 @@
+.topNavigationBar a
+{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+}
+.query
+{
+    width: 100%;
+}
+.topNavigationBar i
+{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 15px;
+    padding-right: 5px;
+}
+#active
+{
+    background: #47d147;
+}
+.topNavigationBar
+{
+    background: #333;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    margin-left: 0px;
+   
+}
+body
+{
+    background: radial-gradient(circle, #ffefba, #ffffff); 
+}
+.queryResult
+{
+    width: 100%;
+}
+#city
+{
+    width: 70%;
+
+}
+#cityname
+{
+width: 50%;
+}
+#submit-btn
+{
+    width: 50%;
+    cursor: pointer;
+}
+
+#button
+{
+    width: 50%;
+}
+table
+{
+    width: 100%;
+}
+.topNavigationBar th
+{
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 15px;
+
+}
+.topNavigationBar th:hover
+{
+    height: 100%;
+    background:#47d147;
+}
+.topNavigationBar table
+{
+    
+    width: 100%;
+    height: 100%;
+    padding-left: 0%;
+    margin-left: 0%;
+}
+ 

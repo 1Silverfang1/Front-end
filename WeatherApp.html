@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Moving Companion</title>
+    <link rel="stylesheet" href="CSS/Weather.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="JavaScript/WeatherApp.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    <div class ="main">
+        <div class ="topNavigationBar">
+            <table>
+                <tr>
+                <th>
+                    <i class="fa fa-home" aria-hidden="true"></i><a href="#">Home</a></th>
+                <th><i class="fa fa-bolt" aria-hidden="true"></i><a href="#">New Anime</a></th>  
+                 <th  ><i class="fa fa-list" aria-hidden="true"></i><a href="SignUp.html">Sign Up</a>
+                 </th>
+                <th ><i class="fa fa-volume-control-phone" aria-hidden="true"></i><a href="Groceryapp.html">Grocery App</a></th>
+                <th  id = "active"> <i class="fa fa-handshake-o" aria-hidden="true"></i><a href="WeatherApp.html">Weather App</a></th>
+                <th> <i class="fa fa-thumbs-up" aria-hidden="true"></i><a href="Tribute.html">Pay tribute</a></th>
+                <th   ><i class="fa fa-calculator" aria-hidden="true"></i><a href="Calculator.html">Calculator</a></th>
+                <th><i class="fa fa-money" aria-hidden="true"></i><a href="surveyform.html">Survey</a></th>
+            </tr>
+            </table>
+            </div>
+            <br><br><br>
+            <div class ="query">
+        <table>
+        <tr>
+        <th id ="cityname"><input type="text" id="city" placeholder="Enter City Name"value=""></th>
+      <th id ="button"><button id="submit-btn">Get Weather Info</button></th>
+    </tr>
+    </table>
+    </div>
+    <div class="queryResult">
+        <table>
+            <tr>
+            <th>CityName</th>
+            <th><input id="weatherCity" type="text" readonly> </th>
+            </tr>
+            <tr>
+                    <th>Latitude and Longitude</th>
+                    <th><input id="coordinates" type="text" readonly></th>
+            </tr>
+            <tr>
+                    <th>Weather</th>
+                    <th><input id="weather" type="text" readonly></th>
+            </tr>
+            <tr>
+                    <th>Temperature</th>
+                    <th><input id="temperature" type="text" readonly></th>
+            </tr>
+            <tr>
+                    <th>Pressure</th>
+                    <th><input id="pressure" type="text" readonly></th>
+            </tr>
+            <tr>
+                    <th>Humidity</th>
+                    <th><input id="humidity" type="text" readonly></th>
+            </tr>
+            <tr>
+                    <th>Visibility</th>
+                    <th><input id="visibility" type="text" readonly></th>
+            </tr>
+            <tr>
+                    <th>Wind Speed</th>
+                    <th><input id="windSpeed" type="text" readonly></th>
+            </tr>
+            <tr>
+                    <th>Cloud</th>
+                    <th><input id="cloud" type="text" readonly></th>
+            </tr>
+
+<!-- <input id="result" type="text" readonly>
+<input id="result" type="text" readonly>
+<input id="result" type="text" readonly>
+<input id="result" type="text" readonly> -->
+</table>
+</div>
+</div>
+</body>
+</html>
