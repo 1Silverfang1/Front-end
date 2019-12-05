@@ -10,22 +10,6 @@
     <img class ="slideshow" src="../images/ichigo5.jpg" alt="Fire" height="295px" width="295px">
     <img class ="slideshow" src="../images/ichigo5.jpg" alt="Fire" height="295px" width="295px">
     </body>
-    <script>
-            var slideIndex = 0;
-            showDivs();
-            
-            function showDivs() {
-                var i;
-              var x = document.getElementsByClassName("slideshow");
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-              }
-              slideIndex++;
-              if (slideIndex > x.length) {slideIndex = 1}
-              x[slideIndex-1].style.display = "block";
-              setTimeout(showDivs, 2700);
-            }
-            
-            </script>
+    <script src="../JavaScript/slideShow.js"></script>
             
     </html>

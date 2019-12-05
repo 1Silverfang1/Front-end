@@ -1,3 +1,8 @@
+let FIRST_COLUMN=0;
+let SECOND_COLUMN=1;
+let THIRD_COLUMN=2;
+let FOURTH_COLUMN=3;
+let FIFTH_COULMN=5;
 let currentRowId=0;
 function newcart(currentId,totalChange)
 {
@@ -14,23 +19,23 @@ function newcart(currentId,totalChange)
      newtotalPrice.toFixed(2);
    currentCart=parseFloat(currentCart)-parseFloat(totalChange);
    currentCart=parseFloat(currentCart)+parseFloat(newtotalPrice); 
-   document.getElementById(currentId).childNodes[3].innerText=newtotalPrice;
+   document.getElementById(currentId).childNodes[FOURTH_COLUMN].innerText=newtotalPrice.toFixed(2);
     document.getElementById('billCart').value=currentCart.toFixed(2);
-    document.getElementById(currentId).childNodes[0].textContent=curItemName;
-    document.getElementById(currentId).childNodes[1].textContent=curItemPrice;
-    document.getElementById(currentId).childNodes[2].textContent=curItemQuantity;
-    document.getElementById(currentId).childNodes[5].innerHTML="<button id='editButton' onclick= 'editCurrentRow("+currentId+")'><i class='fa fa-pencil' aria-hidden= true ></i>Edit</button>"
+    document.getElementById(currentId).childNodes[FIRST_COLUMN].textContent=curItemName;
+    document.getElementById(currentId).childNodes[SECOND_COLUMN].textContent=curItemPrice;
+    document.getElementById(currentId).childNodes[THIRD_COLUMN].textContent=curItemQuantity;
+    document.getElementById(currentId).childNodes[FIFTH_COULMN].innerHTML="<button id='editButton' onclick= 'editCurrentRow("+currentId+")'><i class='fa fa-pencil' aria-hidden= true ></i>Edit</button>"
 }
 function editCurrentRow(currentId)
 {
-    let curItemName     = document.getElementById(currentId).childNodes[0].textContent;
-    let curItemPrice    = document.getElementById(currentId).childNodes[1].textContent;
-    let curItemQuantity = document.getElementById(currentId).childNodes[2].textContent;  
+    let curItemName     = document.getElementById(currentId).childNodes[FIRST_COLUMN].textContent;
+    let curItemPrice    = document.getElementById(currentId).childNodes[SECOND_COLUMN].textContent;
+    let curItemQuantity = document.getElementById(currentId).childNodes[THIRD_COLUMN].textContent;  
     let totalChange=parseFloat(curItemPrice)*parseFloat(curItemQuantity);
-      document.getElementById(currentId).childNodes[0].innerHTML="<textarea id=newColumn1"+currentId+" cols="+25+" rows="+1+" required>"+curItemName+"</textarea>";
-    document.getElementById(currentId).childNodes[1].innerHTML="<input id= newColumn2"+currentId+" type=number min= 0 oninput= validity.valid||(value=''); step='.01' required value="+curItemPrice+">";
-   document.getElementById(currentId).childNodes[2].innerHTML="<input id= newColumn3"+currentId+" type=number min =0 oninput= validity.valid||(value='');required value="+curItemQuantity+">";
-    document.getElementById(currentId).childNodes[5].innerHTML="<button id= saveButton onClick= newcart("+currentId+","+totalChange+")><i class='fa fa-check' aria-hidden=true></i>Save</button>"; 
+      document.getElementById(currentId).childNodes[FIRST_COLUMN].innerHTML="<textarea id=newColumn1"+currentId+" cols="+25+" rows="+1+" required>"+curItemName+"</textarea>";
+    document.getElementById(currentId).childNodes[SECOND_COLUMN].innerHTML="<input id= newColumn2"+currentId+" type=number min= 0 oninput= validity.valid||(value=''); step='.01' required value="+curItemPrice+">";
+   document.getElementById(currentId).childNodes[THIRD_COLUMN].innerHTML="<input id= newColumn3"+currentId+" type=number min =0 oninput= validity.valid||(value='');required value="+curItemQuantity+">";
+    document.getElementById(currentId).childNodes[FIFTH_COULMN].innerHTML="<button id= saveButton onClick= newcart("+currentId+","+totalChange+")><i class='fa fa-check' aria-hidden=true></i>Save</button>"; 
 }
 function removeCurrentRow(currentId)
 {

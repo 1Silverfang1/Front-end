@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Moving Companion</title>
+    <title>WeatherApp</title>
     <link rel="stylesheet" href="CSS/Weather.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="JavaScript/WeatherApp.js"></script>
@@ -30,58 +30,64 @@
             </div>
             <br><br><br>
             <div class ="query">
-        <table>
+        <table id ="finder">
         <tr>
         <th id ="cityname"><input type="text" id="city" placeholder="Enter City Name"value=""></th>
-      <th id ="button"><button id="submit-btn">Get Weather Info</button></th>
+      <th id ="button"><button id="submit-btn" onclick="getWeatherInfo()">Get Weather Info</button></th>
     </tr>
     </table>
+    <img id ="image" >
     </div>
     <div class="queryResult">
         <table>
             <tr>
-            <th>CityName</th>
-            <th><input id="weatherCity" type="text" readonly> </th>
+            <th><i class="fa fa-building" aria-hidden="true"></i>CityName</th>
+            <th><input id="weatherCity" type="text" autocomplete="off" readonly> </th>
             </tr>
             <tr>
-                    <th>Latitude and Longitude</th>
-                    <th><input id="coordinates" type="text" readonly></th>
+                    <th><i class="fa fa-podcast" aria-hidden="true"></i>Latitude and Longitude</th>
+                    <th><input id="coordinates" type="text"  autocomplete="off" readonly></th>
             </tr>
             <tr>
-                    <th>Weather</th>
-                    <th><input id="weather" type="text" readonly></th>
+                    <th><i class="fa fa-sun-o" aria-hidden="true"></i>Weather</th>
+                    <th><input id="weather" type="text" autocomplete="off"  readonly></th>
             </tr>
             <tr>
-                    <th>Temperature</th>
-                    <th><input id="temperature" type="text" readonly></th>
+                    <th><i class="fa fa-thermometer-empty" aria-hidden="true"></i>Temperature</th>
+                    <th><input id="temperature" type="text"  autocomplete="off" readonly></th>
             </tr>
             <tr>
-                    <th>Pressure</th>
-                    <th><input id="pressure" type="text" readonly></th>
+                    <th><i class="fa fa-thermometer-empty" aria-hidden="true"></i>Pressure</th>
+                    <th><input id="pressure" type="text"  autocomplete="off"  readonly></th>
             </tr>
             <tr>
-                    <th>Humidity</th>
-                    <th><input id="humidity" type="text" readonly></th>
+                    <th><i class="fa fa-tint" aria-hidden="true"></i>Humidity</th>
+                    <th><input id="humidity" type="text"  autocomplete="off"  readonly></th>
             </tr>
             <tr>
-                    <th>Visibility</th>
-                    <th><input id="visibility" type="text" readonly></th>
+                    <th><i class="fa fa-search" aria-hidden="true"></i>Visibility</th>
+                    <th><input id="visibility" type="text" autocomplete="off"  readonly></th>
             </tr>
             <tr>
-                    <th>Wind Speed</th>
-                    <th><input id="windSpeed" type="text" readonly></th>
+                    <th><i class="fa fa-fighter-jet" aria-hidden="true"></i>Wind Speed</th>
+                    <th><input id="windSpeed" type="text"  autocomplete="off"  readonly></th>
             </tr>
             <tr>
-                    <th>Cloud</th>
-                    <th><input id="cloud" type="text" readonly></th>
+                    <th><i class="fa fa-cloud" aria-hidden="true"></i>Cloud</th>
+                    <th><input id="cloud" type="text" autocomplete="off"  readonly></th>
             </tr>
-
-<!-- <input id="result" type="text" readonly>
-<input id="result" type="text" readonly>
-<input id="result" type="text" readonly>
-<input id="result" type="text" readonly> -->
 </table>
 </div>
 </div>
+<br><br><br><br>
+<div class ="bottomNav">
+                <div class ="barBottom">
+            <a href="#">Help</a>
+            <a href="#">Send Feedback</a>
+            <a href="#">Privacy And terms</a>
+            <a href="#">Report a Bug</a>
+</div>
+
+                </div>
 </body>
 </html>
